@@ -2,6 +2,7 @@
 ![GitHub release (latest by date)](https://img.shields.io/github/downloads/Nostalgicord/Discord-Web-Build-Archiver/latest/total)
 ![GitHub](https://img.shields.io/github/license/Nostalgicord/Discord-Web-Build-Archiver)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](code_of_conduct.md) 
+
 Archive Discord web builds by only using the build's index.html file, using Python and Regex.
 
 ## Roadmap
