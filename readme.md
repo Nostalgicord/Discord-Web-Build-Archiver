@@ -17,7 +17,7 @@ Archive Discord web builds by only using the build's index.html file, using Pyth
 5. Sit back for 2-5 hours and that's it!
 
 ## Contribution
-Check `code_of_conduct.md` for details.
+(I don't know what lol)
 
 ## License 
 Discord Web Build Archiver is licensed under GPTv3, please don't copy any code without any credit, or copy any code to a closed sourced project.
