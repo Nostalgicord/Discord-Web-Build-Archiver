@@ -1,0 +1,7 @@
+build/**
+Include/**
+Lib/**
+logs/**
+Scripts/**
+pyvenv.cfg
+.vscode/**
