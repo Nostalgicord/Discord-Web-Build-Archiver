@@ -53,18 +53,31 @@ def formatJSandCSS():
 
 def downloadFile(assetFileName, assetFileNameLine, url, finalFilename):
     logging.info(f'Asset found in line {assetFileNameLine+1} in {assetFileName}')
-    try:
-        openURL = urllib.request.urlopen(urllib.request.Request(
-            url, headers={'User-Agent': 'Mozilla/5.0'}))
-    except Exception as e:
-        logging.error(f"{str(e)} | Either your internet is broken, file doesn't exist in Discord's server or regex found a false positive.")
-        logging.error(f'Asset in line is: {finalFilename}')
+    downloadSuccess = None
+    while True:
+        try:
+            openURL = urllib.request.urlopen(urllib.request.Request(
+                url, headers={'User-Agent': 'Mozilla/5.0'}))
+        except urllib.error.HTTPError as e:
+            logging.error(f"{str(e)} | File doesn't exist in Discord's server or regex found a false positive.")
+            logging.error(f'Asset in line is: {finalFilename}')
+            downloadSuccess = False
+            break
+        except urllib.error.URLError as e:
+            logging.error(f"{str(e)} | Internet is broken.")
+            input("Your connection seems to be broken, make sure your Internet is on and try again.")
+            continue
+        else:
+            logging.info(f'Downloading {finalFilename}')
+            with open(os.path.join(__location__, 'build', 'assets', finalFilename), 'wb') as f:
+                f.write(openURL.read())
+                logging.info("Done!")
+                downloadSuccess = True
+                break
+    if downloadSuccess == True:
+        return True
+    else:
         return False
-    logging.info(f'Downloading {finalFilename}')
-    with open(os.path.join(__location__, 'build', 'assets', finalFilename), 'wb') as f:
-        f.write(openURL.read())
-        logging.info("Done!")
-    return True
 
 
 def readFile(filepath):
@@ -82,7 +95,7 @@ print("""
 
 By Featyre, as a part of the Nostalgicord Project.
 https://github.com/Nostalgicord/Discord-Web-Build-Archiver
-Version 1.0
+Version 1.0.1
 """)
 
 if not os.path.exists(os.path.join(__location__, 'logs')):

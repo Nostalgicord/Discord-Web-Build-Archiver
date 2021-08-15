@@ -1,7 +1,7 @@
-build/**
-Include/**
-Lib/**
-logs/**
-Scripts/**
+build
+Include
+Lib
+logs
+Scripts
 pyvenv.cfg
-.vscode/**
+.vscode
