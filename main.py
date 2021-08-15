@@ -65,7 +65,7 @@ def downloadFile(assetFileName, assetFileNameLine, url, finalFilename):
             break
         except urllib.error.URLError as e:
             logging.error(f"{str(e)} | Internet is broken.")
-            input("Your connection seems to be broken, make sure your Internet is on and try again.")
+            input("Your connection seems to be broken, make sure your Internet is on and press Enter to try again.")
             continue
         else:
             logging.info(f'Downloading {finalFilename}')
@@ -95,7 +95,7 @@ print("""
 
 By Featyre, as a part of the Nostalgicord Project.
 https://github.com/Nostalgicord/Discord-Web-Build-Archiver
-Version 1.0.1
+Version 1.0.2
 """)
 
 if not os.path.exists(os.path.join(__location__, 'logs')):

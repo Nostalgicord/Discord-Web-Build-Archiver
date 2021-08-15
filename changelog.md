@@ -6,10 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.2] - 2021-08-16
+### Changed
+- Added a notice to press enter on network connection error to continue
+- Fix a typo on changelog.md
+
 ## [1.0.1] - 2021-08-16
 ### Changed
 - Fixed readme.md
-- Added a Network connection check
+- Added a network connection check
 - Fixed changelog.md
 
 ### Removed
@@ -19,6 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Intial Release
 
-[Unreleased]: https://github.com/Nostalgicord/Discord-Web-Build-Archiver/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/Nostalgicord/Discord-Web-Build-Archiver/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/Nostalgicord/Discord-Web-Build-Archiver/compare/v1.0.2...v1.0.1
 [1.0.1]: https://github.com/Nostalgicord/Discord-Web-Build-Archiver/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Nostalgicord/Discord-Web-Build-Archiver/releases/tag/v1.0.0
