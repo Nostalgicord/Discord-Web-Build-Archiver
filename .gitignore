@@ -5,3 +5,5 @@ logs
 Scripts
 pyvenv.cfg
 .vscode
+bin
+lib64
